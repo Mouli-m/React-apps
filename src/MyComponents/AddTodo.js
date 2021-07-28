@@ -25,23 +25,23 @@ export const AddTodo = ({ addTodo }) => {
     }
     return (
         <div className="container my-3">
-            <h3>Add a Todo</h3>
+            <h3>Tasks</h3>
             <form onSubmit={submit}>
                 <div className="mb-3">
-                    <label htmlFor="title" className="form-label">Todo Title</label>
-                    <input type="text" value={title} onChange={(e) => setTitle(e.target.value)} className="form-control" id="title" aria-describedby="emailHelp" />
+                    <label htmlFor="title" className="form-label">Title</label>
+                    <input type="text" value={title} onChange={(e) => setTitle(e.target.value)} placeholder="Task name"className="form-control" id="title" aria-describedby="emailHelp" />
 
                 </div>
                 <div className="mb-3">
-                    <label htmlFor="desc" className="form-label">Todo Description</label>
-                    <input type="text" value={desc} onChange={(e) => setDesc(e.target.value)} className="form-control" id="desc" />
+                    <label htmlFor="desc" className="form-label">Description</label>
+                    <input type="text" value={desc} onChange={(e) => setDesc(e.target.value)} placeholder="What do you need to do?"className="form-control" id="desc" />
                 </div>
                 <div className="mb-3">
                     <label htmlFor="desc" className="form-label">Date</label> <br />
                     <DatePicker selected={date} value={date} className="form-control" id="date" onChange={(date) => setDate(date)} />
                 </div> 
                
-                <button type="submit" className="btn btn-sm btn-success">Add Todo</button>
+                <button type="submit" className="btn btn-sm btn-success">Save</button>
             </form>
         </div>
     )
